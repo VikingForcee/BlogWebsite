@@ -1,17 +1,42 @@
-# GraphCMS Headless Blog
-### [Live Site](https://nextjs-plum-five-51.vercel.app/)
+# Personal Blog Website
 
-![GraphCMS Headless Blog](https://i.ibb.co/NmnJnKD/image.png)
+A full-fledged personal blog platform built using React, Tailwind CSS, and GraphQL. This application supports publishing and reading blogs with rich media content such as text, images, code blocks, and lists. Designed as a multi-page app with reusable components and a clean, responsive UI.
 
-### [🌟 Become a top 1% Next.js 13 developer in only one course](https://jsmastery.pro/next13)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+## Features
 
-## Stay up to date with new projects
-New major projects coming soon, subscribe to the mailing list to stay up to date https://resource.jsmasterypro.com/newsletter
+- Create and publish blogs with:
+  - Formatted text (headings, paragraphs, bold, italic, etc.)
+  - Images
+  - Lists (ordered and unordered)
+  - Code blocks with syntax highlighting
+- Multi-page routing with clean navigation
+- Comments from different account supported
+- Each post is split and maintained in different Categories
+- Modular and reusable component architecture
+- GraphQL backend for efficient data querying and mutations
+- Tailwind CSS for fast, responsive, and consistent styling
+- Clean and minimal user interface
+- Fully responsive across devices
 
-## Introduction
-This is a code repository for the corresponding video tutorial. 
+## Preview 
 
-With featured and recent posts, categories. full markdown articles, author information, comments, and much more, this fully responsive CMS Blog App is the best Blog Application that you can currently find on YouTube. And what's best of all is that you and your clients can manage the blog from a dedicated Content Management System.
+![Live Preview 1](./public/preview1.png)
+![Live Preview 2](./public/Preview2.png)
+![Live Preview 3](./public/Preview3.png)
 
-You'll also learn how to work with GraphCMS. GraphCMS is a headless content management system based on GraphQL technology enabling seamless integration with any application.
+
+
+## Tech Stack
+
+- **Frontend:** React (with React Router), Tailwind CSS
+- **Backend:** GraphQL (e.g., Apollo Server, Hasura, or any GraphQL backend)
+- **State Management:** React Hooks, Context API (if needed)
+
+
+## Deployment
+Will Delploy this application soon, after some changes in the UI and website content.
+
+## Future Improvements
+Add user authentication for blog authoring
+Admin dashboard for managing posts
+Dark mode toggle
