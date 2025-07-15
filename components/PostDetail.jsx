@@ -40,11 +40,10 @@ const PostDetail = ({ post }) => {
               // Each list item has a list-item-child that contains the actual content
               const listItemContent = listItem.children.map((child, childIndex) => {
                 if (child.type === 'list-item-child') {
-                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`, 
+                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
                     grandChild.text,
                     grandChild,
-                  )
-                  );
+                  ));
                 }
                 return null;
               });
@@ -60,12 +59,10 @@ const PostDetail = ({ post }) => {
               // Each list item has a list-item-child that contains the actual content
               const listItemContent = listItem.children.map((child, childIndex) => {
                 if (child.type === 'list-item-child') {
-                  return child.children.map((grandChild, grandChildIndex) => {
-                    return getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
-                      grandChild.text,
-                      grandChild
-                    );
-                  });
+                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
+                    grandChild.text,
+                    grandChild,
+                  ));
                 }
                 return null;
               });
@@ -101,7 +98,7 @@ const PostDetail = ({ post }) => {
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
-          <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" />
+          <img src={post.featuredImage.url} alt=" " className="object-top h-full w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
