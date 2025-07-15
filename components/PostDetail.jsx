@@ -32,6 +32,7 @@ const PostDetail = ({ post }) => {
         return <h1 key={index} className="text-3xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
       case 'block-quote':
         return <blockquote key={index} className="italic border-l-4 border-gray-300 pl-4 py-2 mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</blockquote>;
+
       case 'bulleted-list':
         return (
           <ul key={index} className="list-disc pl-6 mb-8">
@@ -40,7 +41,8 @@ const PostDetail = ({ post }) => {
               // Each list item has a list-item-child that contains the actual content
               const listItemContent = listItem.children.map((child, childIndex) => {
                 if (child.type === 'list-item-child') {
-                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
+                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(
+                    `list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
                     grandChild.text,
                     grandChild,
                   ));
@@ -59,7 +61,8 @@ const PostDetail = ({ post }) => {
               // Each list item has a list-item-child that contains the actual content
               const listItemContent = listItem.children.map((child, childIndex) => {
                 if (child.type === 'list-item-child') {
-                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
+                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(
+                    `list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
                     grandChild.text,
                     grandChild,
                   ));
