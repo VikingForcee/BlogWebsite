@@ -35,32 +35,26 @@ const CommentsForm = ({ slug }) => {
         ...prevState,
         [target.name]: target.value,
       }));
-      
       // Clear email error when user starts typing in email field
       if (target.name === 'email') {
         setEmailError(false);
       }
     }
   };
-
   const handlePostSubmission = () => {
     setError(false);
     setEmailError(false);
-    
     const { name, email, comment, storeData } = formData;
-    
     // Check if any field is empty
     if (!name || !email || !comment) {
       setError(true);
       return;
     }
-    
     // Validate email format
     if (!validateEmail(email)) {
       setEmailError(true);
       return;
     }
-    
     const commentObj = {
       name,
       email,
