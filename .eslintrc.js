@@ -18,6 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'function-paren-newline': "off",
     'jsx-a11y/label-has-associated-control': 0,
     'react/jsx-props-no-spreading': 0,
     'react/react-in-jsx-scope': 0,
