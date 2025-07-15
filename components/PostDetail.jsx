@@ -40,17 +40,14 @@ const PostDetail = ({ post }) => {
               // Each list item has a list-item-child that contains the actual content
               const listItemContent = listItem.children.map((child, childIndex) => {
                 if (child.type === 'list-item-child') {
-                  return child.children.map((grandChild, grandChildIndex) => {
-                    return getContentFragment(
-                      `list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
-                      grandChild.text,
-                      grandChild
-                    );
-                  });
+                  return child.children.map((grandChild, grandChildIndex) => getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`, 
+                    grandChild.text,
+                    grandChild,
+                  )
+                  );
                 }
                 return null;
               });
-              
               return <li key={`li-${listItemIndex}`} className="mb-2">{listItemContent}</li>;
             })}
           </ul>
@@ -64,8 +61,7 @@ const PostDetail = ({ post }) => {
               const listItemContent = listItem.children.map((child, childIndex) => {
                 if (child.type === 'list-item-child') {
                   return child.children.map((grandChild, grandChildIndex) => {
-                    return getContentFragment(
-                      `list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
+                    return getContentFragment(`list-${index}-${listItemIndex}-${childIndex}-${grandChildIndex}`,
                       grandChild.text,
                       grandChild
                     );
@@ -73,7 +69,6 @@ const PostDetail = ({ post }) => {
                 }
                 return null;
               });
-              
               return <li key={`li-${listItemIndex}`} className="mb-2">{listItemContent}</li>;
             })}
           </ol>
@@ -84,7 +79,7 @@ const PostDetail = ({ post }) => {
         return (
           <img
             key={index}
-            alt={obj.title || ""}
+            alt={obj.title || ''}
             height={obj.height}
             width={obj.width}
             src={obj.src}
